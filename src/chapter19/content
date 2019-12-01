@@ -1,0 +1,15 @@
+第19章 枚举类型
+1.除了不能继承自一个enum之外，我们基本上可以将enum看作一个常规的类
+2.如果要自定义方法，在enum实例序列的最后添加一个分号，再在后边编写方法
+3.enum的构造器只能时私有的
+4.switch的case语句中不必用enum类型来修饰enum实例
+5.values()是由编译器添加的static方法
+6.由于values()是编译器添加的，所以enum是咧向上转型为Enum，values方法就不能访问了。不过Class中有一个getEnumConstants()方法可以获得所有的enum实例
+7.所有的enum实例都继承自java.lang.Enum类，由于java不支持多重继承，所以enum不能再继承其他类，但可以实现多个接口
+8.组织枚举的方式：a在接口内实现接口b枚举内嵌套枚举
+9.使用EnumSet替代标志
+10.EnumMap
+11.常量相关方法：为enum定义一个或多个abstract方法，然后为每个enum实例实现该抽象方法
+12.Enum责任链
+13.Enum状态机
+14.多路分发

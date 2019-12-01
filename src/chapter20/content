@@ -1,0 +1,12 @@
+第20章 注解
+
+1.Java SE5内置的3种注解：@Override、@Deprecated、@SuppressWarnings
+2.             4中元注解(专职负责注解其他的注解):
+    @Target--定义注解用在什么地方（CONSTRUCTOR-构造器的声明、FIELD-域声明、LOCAL_VARIABLE-局部变量声明、METHOD-方法声明、PACKAGE:包声明、PARAMETER-参数声明、TYPE-类或接口或enum声明）
+    @Retention--定义注解在哪一级别可用（SOURCE-注解将被编译器丢掉、CLASS-注解在CLASS文件中可用，但会被JVM丢弃、RUNTIME-VM在运行时也保留注解）
+    @Documented--将此注解包含在javadoc中
+    @Inherited--允许子类继承父类的注解
+3.注解处理器用到的方法：getDeclaredMethods、getAnnotation
+4.用@interface定义注解
+5.不能用extends关键字来继承某个@interface
+6.注解处理工具apt，使用apt生成注解处理器时，无法利用Java的反射机制，mirror API可以解决
